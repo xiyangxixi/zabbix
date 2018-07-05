@@ -60,6 +60,10 @@
       replace: path=/etc/httpd/conf.d/zabbix.conf regexp="300" replace="600"
     - name: 修改zabbix.conf配置
       replace: path=/etc/httpd/conf.d/zabbix.conf regexp="2" replace="32"
+    - name: 软连接
+      file: path=/var/lib/mysql state=directory
+    - name: 软连接
+      shell: ln -s /tmp/mysql.sock /var/lib/mysql/mysql.sock
     - name: 启动zabbix
       service: name=zabbix-server state=started
     - name: 启动httpd

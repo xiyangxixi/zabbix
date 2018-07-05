@@ -1,0 +1,5 @@
+# 通过ansible批量安装agent
+sed -i 's/Server=127.0.0.1/Server=192.168.29.251/g' /etc/zabbix/zabbix-agent.conf
+sed -i '/# ListenIP=0.0.0.0/a\ListenIP=192.168.29.252' /etc/zabbix/zabbix-agent.conf
+sed -i 's/ServerActive=127.0.0.1/ServerActive=192.168.29.251:10051/' /etc/zabbix/zabbix-agent.conf
+sed -i 's/Hostname=Zabbix Server/Hostname=192.168.29.252/' /etc/zabbix/zabbix-agent.conf

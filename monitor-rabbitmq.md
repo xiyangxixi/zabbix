@@ -23,7 +23,6 @@ UserParameter=rabbitmq.pallet_storage_change_queue,cat /tmp/rabbitmq4.txt
 UserParameter=rabbitmq.relieving-then-pallet-message-alarm,cat /tmp/rabbitmq5.txt
 
 ```
-
 * 3、通过zabbix-proxy获取数据，确认无误。
 ```
 root@zabbix_node02:/opt/zabbix_home/bin# ./zabbix_get -s x.x.x.x -k rabbitmq.relieving-then-pallet-message-alarm

@@ -25,11 +25,11 @@ UserParameter=rabbitmq.relieving-then-pallet-message-alarm,cat /tmp/rabbitmq5.tx
 ```
 
 * 3、通过zabbix-proxy获取数据，确认无误。
-···
+```
 root@zabbix_node02:/opt/zabbix_home/bin# ./zabbix_get -s x.x.x.x -k rabbitmq.relieving-then-pallet-message-alarm
 0
 
-···
+```
 
 * 4、配置zabbixUI上的显示
-# 配置监控项
+##### 配置监控项

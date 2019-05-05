@@ -1,0 +1,12 @@
+version: '3'
+services:
+  zabbix-agent:
+    image: "zabbix/zabbix-agent:centos-4.0.4"
+    container_name: "zabbix-agent"
+    network_mode: "host"
+    restart: "always"
+    ports: 
+      - "10050:10050"
+    environment: 
+      - "ZBX_HOSTNAME=192.168.1.2"
+      - "ZBX_SERVER_HOST=192.168.1.1"
